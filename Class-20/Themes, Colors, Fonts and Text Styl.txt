@@ -1,0 +1,28 @@
+Themes, Colors, Fonts and Text Styling
+
+With ThemeData, we can define common styles in one place.
+
+TextStyle and Fonts
+
+Property	Purpose			Example
+--------------------------------------------------------------
+fontSize	Changes text size	fontSize: 25
+fontWeight	Changes thickness	FontWeight.bold
+fontStyle	Normal or italic	FontStyle.italic
+color		Changes text color	Colors.blue
+fontFamily	Selects font family	'Arial'
+letterSpacing	Space between letters	letterSpacing: 2
+wordSpacing	Space between words	wordSpacing: 5
+decoration	Underline or line-through	TextDecoration.underline
+
+
+Theme.of(context)
+It retrieves the theme available at the current widget's location in the widget tree.
+TextTheme property	Typical purpose
+displayLarge	Very large display text
+headlineLarge	Main page heading
+titleLarge	Section heading
+bodyLarge	Main paragraph
+bodyMedium	Normal supporting text
+labelLarge	Button and label text
+

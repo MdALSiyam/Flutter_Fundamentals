@@ -1,0 +1,81 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: SettingsScreen(),
+    );
+  }
+}
+
+class SettingsScreen extends StatefulWidget {
+  const SettingsScreen({super.key});
+
+  @override
+  State<SettingsScreen> createState() => _SettingsScreenState();
+}
+
+class _SettingsScreenState extends State<SettingsScreen> {
+
+  bool isEnrolled = false;
+  bool notificationsEnabled = true;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Settings'),
+      ),
+
+      body: Column(
+        children: [
+
+          CheckboxListTile(
+            title: const Text('Course Enrollment'),
+            subtitle: const Text('Confirm your enrollment'),
+            value: isEnrolled,
+
+            onChanged: (value) {
+              setState(() {
+                isEnrolled = value ?? false;
+              });
+            },
+          ),
+
+          SwitchListTile(
+            title: const Text('Notifications'),
+            subtitle: const Text('Enable notifications'),
+            value: notificationsEnabled,
+
+            onChanged: (value) {
+              setState(() {
+                notificationsEnabled = value;
+              });
+            },
+          ),
+
+          const Divider(),
+
+          Text(
+            'Enrollment: ${isEnrolled ? "Confirmed" : "Not Confirmed"}',
+            style: const TextStyle(fontSize: 18),
+          ),
+
+          const SizedBox(height: 10),
+
+          Text(
+            'Notifications: ${notificationsEnabled ? "ON" : "OFF"}',
+            style: const TextStyle(fontSize: 18),
+          ),
+
+        ],
+      ),
+    );
+  }
+}

@@ -1,0 +1,90 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: InputScreen(),
+    );
+  }
+}
+
+class InputScreen extends StatefulWidget {
+  const InputScreen({super.key});
+
+  @override
+  State<InputScreen> createState() => _InputScreenState();
+}
+
+class _InputScreenState extends State<InputScreen> {
+
+  final TextEditingController nameController =
+      TextEditingController();
+
+  String message = 'Enter your name';
+
+  @override
+  void dispose() {
+    nameController.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('TextField Example'),
+      ),
+
+      body: Padding(
+        padding: const EdgeInsets.all(20),
+
+        child: Column(
+          children: [
+
+            TextField(
+              controller: nameController,
+              decoration: const InputDecoration(
+                labelText: 'Student Name',
+                hintText: 'Enter your name',
+                prefixIcon: Icon(Icons.person),
+                border: OutlineInputBorder(),
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {
+                setState(() {
+                  String name = nameController.text.trim();
+
+                  message = name.isEmpty
+                      ? 'Please enter your name'
+                      : 'Welcome, $name!';
+                });
+              },
+              child: const Text('Submit'),
+            ),
+
+            const SizedBox(height: 20),
+
+            Text(
+              message,
+              style: const TextStyle(
+                fontSize: 22,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+          ],
+        ),
+      ),
+    );
+  }
+}

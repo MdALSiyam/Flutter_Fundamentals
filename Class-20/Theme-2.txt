@@ -1,0 +1,96 @@
+import 'package:flutter/material.dart';
+
+void main() => runApp(const MyApp());
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    return MaterialApp(
+
+      debugShowCheckedModeBanner: false,
+
+      home: Scaffold(
+
+        appBar: AppBar(
+          title: const Text('Text Styling'),
+        ),
+
+        body: Padding(
+          padding: const EdgeInsets.all(20),
+
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+
+            children: [
+
+              const Text(
+                'Flutter Course',
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.blue,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              const Text(
+                'Welcome to our Flutter learning program.',
+                style: TextStyle(
+                  fontSize: 18,
+                  color: Colors.black54,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              const Text(
+                'This is italic text',
+                style: TextStyle(
+                  fontSize: 20,
+                  fontStyle: FontStyle.italic,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              const Text(
+                'Underlined Text',
+                style: TextStyle(
+                  fontSize: 20,
+                  decoration: TextDecoration.underline,
+                  color: Colors.green,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              const Text(
+                'Line Through Text',
+                style: TextStyle(
+                  fontSize: 20,
+                  decoration: TextDecoration.lineThrough,
+                ),
+              ),
+
+              const SizedBox(height: 15),
+
+              const Text(
+                'Custom Font Family',
+                style: TextStyle(
+                  fontSize: 25,
+                  fontFamily: 'Arial',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

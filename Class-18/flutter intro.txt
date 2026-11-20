@@ -1,0 +1,61 @@
+import 'package:flutter/material.dart';
+For example, this import allows us to use:
+- MaterialApp
+- Scaffold
+- AppBar
+- Text
+- Center
+- ElevatedButton
+- TextField
+- Checkbox
+
+Without the import, Dart would not recognize these Material widgets.
+
+void main() => runApp(const MyApp());
+
+runApp() tells Flutter to display the widget passed to it as the root of the application
+
+Here, MyApp() is the first widget in our application
+
+Here we create our own class called MyApp.
+
+It extends Flutter's StatelessWidget.
+
+What is a StatelessWidget?
+
+A StatelessWidget is a widget whose configuration does not maintain mutable state of its own.
+
+const MyApp({super.key});
+
+It allows the widget to be constructed as a compile-time constant when its arguments are constant.
+It forwards the key parameter to the parent class, StatelessWidget. A key helps Flutter identify widgets in the widget tree, particularly when widgets are added, removed or reordered.
+
+@override
+Widget build(BuildContext context) 
+The StatelessWidget parent class requires us to provide a build() method. We use @override because we are implementing that inherited method.
+
+What is BuildContext?
+
+BuildContext represents the location of this widget in Flutter's widget tree.
+
+It is useful when we need to access information about the surrounding application, such as its theme, navigation or scaffold.
+
+For now, students simply need to understand that Flutter provides this context when calling build().
+
+MaterialApp is the main container for a Material Design application.
+
+It provides application-level features such as theming and navigation.
+
+The home property defines the main screen of the application.
+
+Scaffold provides a standard screen structure. It gives us areas for an app bar, body, drawer, floating action button and other common screen elements.
+
+AppBar creates the top application bar.
+
+- appBar is a property of Scaffold.
+- AppBar() creates the top bar.
+- title defines what should appear inside it.
+- Text() displays the heading.
+
+
+
