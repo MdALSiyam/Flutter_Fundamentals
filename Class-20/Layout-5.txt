@@ -1,0 +1,70 @@
+Container is like a customizable box.
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Container Example"),
+        ),
+        body: Center(
+          child: Container(
+            width: 250,
+            height: 150,
+            color: Colors.blue,
+            child: const Center(
+              child: Text(
+                "Hello Flutter",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 24,
+                ),
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+-------------------------------------------------
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(title: const Text("Padding and Margin")),
+        body: Center(
+          child: Container(
+            margin: const EdgeInsets.all(20),
+            padding: const EdgeInsets.all(20),
+            color: Colors.orange,
+            child: const Text(
+              "Flutter Layout",
+              style: TextStyle(fontSize: 24),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

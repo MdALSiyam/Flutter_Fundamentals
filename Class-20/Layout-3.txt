@@ -1,0 +1,37 @@
+Column-Arranges widgets from top to bottom ↓
+Row-Arranges widgets from left to right →
+Container-Provides size, color, padding, margin, decoration, etc.
+
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Column Example"),
+        ),
+        body: Center(
+          child: Column(
+            children: const [
+              Text("First Widget"),
+              Text("Second Widget"),
+              Text("Third Widget"),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+	

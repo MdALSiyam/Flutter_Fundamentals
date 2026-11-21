@@ -1,0 +1,13 @@
+Concept	Flutter 	class/property		Purpose
+---------------------------------------------------------------------------
+Application theme	ThemeData		Defines overall design
+Theme colors		ColorScheme		Defines coordinated colors
+AppBar design		AppBarTheme		Defines AppBar appearance
+Button design		ElevatedButtonThemeData	Defines default button style
+Text styles		TextStyle		Styles individual text
+Common typography	TextTheme		Defines reusable text styles
+Access theme		Theme.of(context)	Reads current theme
+Light theme		theme			Defines light appearance
+Dark theme		darkTheme		Defines dark appearance
+Theme selection		themeMode		Chooses active theme
+Custom fonts		fontFamily		Applies a font family
