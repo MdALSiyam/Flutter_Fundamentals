@@ -1,0 +1,61 @@
+//IconButton with click interaction
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: const IconScreen(),
+    );
+  }
+}
+
+class IconScreen extends StatefulWidget {
+  const IconScreen({super.key});
+
+  @override
+  State<IconScreen> createState() => _IconScreenState();
+}
+
+class _IconScreenState extends State<IconScreen> {
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Icon Button"),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              "Button clicked $counter times",
+              style: const TextStyle(fontSize: 22),
+            ),
+
+            IconButton(
+              icon: const Icon(Icons.add_circle),
+              iconSize: 60,
+              color: Colors.blue,
+              onPressed: () {
+                setState(() {
+                  counter++;
+                });
+              },
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}

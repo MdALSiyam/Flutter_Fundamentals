@@ -1,0 +1,76 @@
+//Display an SVG asset
+-------------------------------------
+flutter pub add flutter_svg
+assets/images/flutter_logo.svg
+------------------------------------
+
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+------------------------------------
+
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("SVG Example"),
+        ),
+        body: Center(
+          child: SvgPicture.asset(
+            'assets/images/flutter_logo.svg',
+            width: 200,
+            height: 200,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+------------------------------------------------
+
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Network SVG"),
+        ),
+        body: Center(
+          child: SvgPicture.network(
+            'https://www.svgrepo.com/download/452202/flutter.svg',
+            width: 150,
+            height: 150,
+          ),
+        ),
+      ),
+    );
+  }
+}

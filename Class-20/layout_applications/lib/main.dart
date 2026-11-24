@@ -1,7 +1,7 @@
-// Poppins Font
-/*
 import 'package:flutter/material.dart';
 
+// Poppins Font
+/*
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -53,8 +53,6 @@ class MyApp extends StatelessWidget {
 
 // Column Widget
 /*
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -85,8 +83,6 @@ class MyApp extends StatelessWidget {
 
 // Column Widget with MainAxisAlignment
 /*
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -113,8 +109,6 @@ class MyApp extends StatelessWidget {
 
 // Row Widget
 /*
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -141,8 +135,6 @@ class MyApp extends StatelessWidget {
 
 // Container Widget
 /*
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -177,8 +169,6 @@ class MyApp extends StatelessWidget {
 
 // Padding and Margin
 /*
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -208,8 +198,6 @@ class MyApp extends StatelessWidget {
 
 // Decoration Card
 /*
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }
@@ -251,8 +239,6 @@ class MyApp extends StatelessWidget {
 */
 
 // Student Profile Card
-import 'package:flutter/material.dart';
-
 void main() {
   runApp(const MyApp());
 }

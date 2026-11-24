@@ -1,0 +1,59 @@
+//Display multiple icons
+
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Flutter Icons"),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: const [
+              Icon(
+                Icons.home,
+                size: 60,
+                color: Colors.blue,
+              ),
+
+              SizedBox(height: 20),
+
+              Icon(
+                Icons.favorite,
+                size: 60,
+                color: Colors.red,
+              ),
+
+              SizedBox(height: 20),
+
+              Icon(
+                Icons.shopping_cart,
+                size: 60,
+                color: Colors.green,
+              ),
+
+              SizedBox(height: 20),
+
+              Icon(
+                Icons.person,
+                size: 60,
+                color: Colors.orange,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
